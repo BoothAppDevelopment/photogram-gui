@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   # Photos
   get("/photos", {:controller => "photos", :action => "index"})
-  get("/users/:path_photo_id", {:controller => "photos", :action => "show"})
+  get("/photos/:path_id", {:controller => "photos", :action => "show"})
 end
