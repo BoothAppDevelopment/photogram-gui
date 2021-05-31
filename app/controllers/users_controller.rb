@@ -9,6 +9,18 @@ def index
   render({ :template => "user_templates/index.html.erb"})
 end
 
+def show
+  url_username = params.fetch("path_username")
+  @the_user = User.where({ :username => url_username}).first
+
+  if @the_user == nil
+    redirect_to("/404")
+  else
+    render({ :template => "user_templates/show.html.erb"})
+  end
+
+end
+
 
 
 end
