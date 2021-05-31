@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # Users
   get("/users", {:controller => "users", :action => "index"})
   get("/users/:path_username", {:controller => "users", :action => "show"})
+  get("/create_user", {:controller => "users", :action => "create"})
 
   # Photos
   get("/photos", {:controller => "photos", :action => "index"})
